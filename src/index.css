@@ -1,10 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+
+  background: #E9E9E9;
+  background: -webkit-linear-gradient(top left, #E9E9E9, #CAD5CA);
+  background: -moz-linear-gradient(top left, #E9E9E9, #CAD5CA);
+  background: linear-gradient(to bottom right, #E9E9E9, #CAD5CA);
+  background-size: 500px auto;
+  background-image: url(./assets/GO.VITAL_Mockup_Protokoll_BG_Image.png);
+  background-repeat: no-repeat;
+  background-position: right 92%;
+
 }
 
 code {
