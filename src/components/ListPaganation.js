@@ -19,4 +19,4 @@ const ListPaganation = () => {
   );
 }
 
-export default ListPaganation
+export default ListPaganation;
