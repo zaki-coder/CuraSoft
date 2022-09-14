@@ -3,7 +3,6 @@ import ListItem from './ListItem';
 const ListItems = ({items, loading}) => {
   const [page, setPage] = useState(0);
   const [protokols, setProtokols] = useState([]);
-
   useEffect(() => {
     if(loading) return;
     setProtokols(items[page]);

@@ -6,13 +6,35 @@ import {dateToTimeAgo} from "../util/timeDiff";
 
 
 const ListItem = ({item}) => {
+  // let icon;
+  // switch (item.type) {
+  //   case 'log':
+  //     return icon = <AiFillCloseCircle />
+  //     break;
+  //   case 'error':
+  //     return icon = <FaExclamationTriangle />
+  //     break;
+  //   case 'warning':
+  //     return (icon = (
+  //       <FaExclamationTriangle
+  //         icon="fa-solid fa-circle-xmark"
+  //         className="w-6 h-6  mr-4 text-gray-500"
+  //       />
+  //     ));
+  //     break;
+  // }
   return (
     <div className="flex items-center py-2 px-2 border-b border-gray-100">
       <div>
-        <FaExclamationTriangle
-          icon="fa-solid fa-circle-xmark"
-          className="w-6 h-6  mr-4 text-gray-500"
-        />
+        {item.typ === "log" ? (
+          <i className="fa-solid fa-circle-info w-6 h-6  mr-4 text-gray-500"></i>
+        ) : item.typ === "warning" ? (
+          <i className="fa-solid fa-triangle-exclamation w-6 h-6  mr-4 text-gray-500"></i>
+        ) : item.typ === "error" ? (
+          <i className="fa-solid fa-circle-xmark w-6 h-6  mr-4 text-gray-500"></i>
+        ) : (
+          ""
+        )}
       </div>
       <div className="">
         <h3 className="text-md text-gray-700">{item.message}</h3>
