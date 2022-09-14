@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/CuraSoft/static/css/main.b4c1bc44.css",
+    "main.js": "/CuraSoft/static/js/main.2f931a8a.js",
+    "static/media/GO.VITAL_Mockup_Protokoll_BG_Image.png": "/CuraSoft/static/media/GO.VITAL_Mockup_Protokoll_BG_Image.1e428b1c0b2c47cdf5fe.png",
+    "index.html": "/CuraSoft/index.html",
+    "main.b4c1bc44.css.map": "/CuraSoft/static/css/main.b4c1bc44.css.map",
+    "main.2f931a8a.js.map": "/CuraSoft/static/js/main.2f931a8a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b4c1bc44.css",
+    "static/js/main.2f931a8a.js"
+  ]
+}
