@@ -1,6 +1,4 @@
 import React from 'react'
-import { AiFillCloseCircle } from "react-icons/ai";
-import { FaExclamationTriangle } from "react-icons/fa";
 import {dateToTimeAgo} from "../util/timeDiff";
 
 

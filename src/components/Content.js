@@ -39,13 +39,13 @@ const Content = () => {
     };
     if (searchData.length === 0 || searchData.length > 2) fetchItems();
       
-  }, [searchData]);
+  }, [query, searchData]);
 
   const renderMultiRoutes = ({
     element: Element,
     paths,
     ...rest
-  }: MultiRoutes) =>
+  }) =>
     paths.map((path) => (
       <Route key={path} path={path} {...rest} element={Element} />
     ));
@@ -62,7 +62,7 @@ const Content = () => {
                 query === "all" ? "bg-primary" : "bg-primary opacity-50"
               }`}
             >
-              <a href="">Alle</a>
+              Alle
             </button>
             <button
               onClick={() => setQuery("error")}
@@ -70,7 +70,7 @@ const Content = () => {
                 query === "error" ? " bg-primary" : "bg-primary opacity-50"
               }`}
             >
-              <a href="">Fehler</a>
+             Fehler
             </button>
             <button
               onClick={() => setQuery("warning")}
@@ -78,7 +78,7 @@ const Content = () => {
                 query === "warning" ? " bg-primary" : "bg-primary opacity-50"
               }`}
             >
-              <a href="">Warnung</a>
+              Warnung
             </button>
             <button
               onClick={() => setQuery("log")}
@@ -86,7 +86,7 @@ const Content = () => {
                 query === "log" ? " bg-primary" : "bg-primary opacity-50"
               }`}
             >
-              <a href="">Log</a>
+              Log
             </button>
           </div>
           <Routes>

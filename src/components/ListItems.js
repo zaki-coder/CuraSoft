@@ -6,7 +6,7 @@ const ListItems = ({items, loading}) => {
   useEffect(() => {
     if(loading) return;
     setProtokols(items[page]);
-  }, [loading, page]);
+  }, [loading, page, items]);
 
   const handlePage = (index) => {
     setPage(index);
