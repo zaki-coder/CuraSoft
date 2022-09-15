@@ -3,6 +3,7 @@ import { HiSearch } from "react-icons/hi";
 
 
 const SearchProtocolls = ({ setSearchData, items }) => {
+  console.log(items);
   const handleSubmit = (e) => e.preventDefault();
   const handleSearchChange = (e) => {
     if (!e.target.value) return setSearchData(items);

@@ -16,7 +16,7 @@ export function dateToTimeAgo(date) {
   return month >= 1
     ? f(month, "Monate")
     : day >= 1
-    ? f(day, "Tag")
+    ? f(day, "Tage")
     : hr >= 1
     ? f(hr, "Stunde")
     : min >= 1

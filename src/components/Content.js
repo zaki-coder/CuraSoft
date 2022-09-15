@@ -5,6 +5,7 @@ import axios from "axios";
 import paginateData from "../util/paginateData";
 import SearchProtocolls from './SearchProtocolls';
 const api_endpoint = "https://test.cura-go.de/web/v3/go.vital/protocol";
+// const api_url = "http://localhost:4000";
 const access_token = process.env.REACT_APP_API_KEY;
 
 
@@ -14,7 +15,6 @@ const Content = () => {
   const [query, setQuery] = useState('');
   const [searchData, setSearchData] = useState([]);
   const [items, setItems] = useState([]);
-
 
 
   useEffect(() => {
@@ -91,7 +91,7 @@ const Content = () => {
           </div>
           <Routes>
             {renderMultiRoutes({
-              paths: ["/", "/log"],
+              paths: ["/log", "/"],
               element: (
                 <ListItems
                   items={items}

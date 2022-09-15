@@ -23,7 +23,7 @@ const ListItems = ({items, loading}) => {
       </div>
       {!loading && (
         <ul className="bg-white flex justify-end w-100% m-4">
-          {protokols.map((item, index) => {
+          {items.map((item, index) => {
             return (
               <button
                 onClick={() => handlePage(index)}

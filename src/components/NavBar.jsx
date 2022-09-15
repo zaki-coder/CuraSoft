@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import Logo from "../assets/logo/Cura-logo.png";
+import { NavLink } from "react-router-dom";
 
 function NavBar() {
+  const activeLink =
+    "text-white font-semibold px-3 py-2 text-sm font-medium hover:border-b-4 focus:border-b-[3px] active:border-white";
+  const normalLink =
+    "text-gray-200 px-3 py-2 text-sm font-medium hover:border-b-4 focus:border-b-[3px] active:border-white";
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="">
@@ -15,40 +20,50 @@ function NavBar() {
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4 text-white ">
-                  <a
-                    href="#"
-                    className="  text-white px-3 py-2 text-sm font-medium hover:border-b-4 focus:border-b-[3px] active:border-white"
+                  <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                      isActive ? activeLink : normalLink
+                    }
                   >
                     Start
-                  </a>
+                  </NavLink>
 
-                  <a
-                    href="#"
-                    className="text-white  hover:text-white px-3 py-2 text-sm font-medium focus:border-b-[3px] active:border-white"
+                  <NavLink
+                    to="/patienten"
+                    className={({ isActive }) =>
+                      isActive ? activeLink : normalLink
+                    }
                   >
                     Patienten
-                  </a>
+                  </NavLink>
 
-                  <a
-                    href="#"
-                    className="text-white  hover:text-white px-3 py-2 text-sm font-medium focus:border-b-[3px] active:border-white"
+                  <NavLink
+                    to="/kurven"
+                    className={({ isActive }) =>
+                      isActive ? activeLink : normalLink
+                    }
                   >
                     Kurven
-                  </a>
+                  </NavLink>
 
-                  <a
-                    href="#"
-                    className="text-white  hover:text-white px-3 py-2 text-sm font-medium focus:border-b-[3px] active:border-white"
+                  <NavLink
+                    to="/einstellungen"
+                    className={({ isActive }) =>
+                      isActive ? activeLink : normalLink
+                    }
                   >
                     Einstellungen
-                  </a>
+                  </NavLink>
 
-                  <a
-                    href="#"
-                    className="text-white  hover:text-white px-3 py-2 text-sm font-medium focus:border-b-[3px] active:border-white"
+                  <NavLink
+                    to="/log"
+                    className={({ isActive }) =>
+                      isActive ? activeLink : normalLink
+                    }
                   >
                     Protokoll
-                  </a>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -112,35 +127,35 @@ function NavBar() {
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a
-                  href="#"
+                  href="/start"
                   className=" text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Start
                 </a>
 
                 <a
-                  href="#"
+                  href="/patienten"
                   className="text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Patienten
                 </a>
 
                 <a
-                  href="#"
+                  href="/kurven"
                   className="text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Kurven
                 </a>
 
                 <a
-                  href="#"
+                  href="/einstellungen"
                   className="text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Einstellungen
                 </a>
 
                 <a
-                  href="#"
+                  href="/log"
                   className="text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Protokoll
