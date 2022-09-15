@@ -13,7 +13,7 @@ function NavBar() {
     <div className="">
       <nav className="bg-primary drop-shadow-md">
         <div className=" mx-auto px-4 sm:px-6 lg:px-2">
-          <div className="flex items-center h-10">
+          <div className="flex items-center h-10 justify-between">
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <img className="w-16 h-6" src={Logo} alt="Logo" />
@@ -71,14 +71,14 @@ function NavBar() {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="bg-gray-900 inline-flex items-center justify-center p-2 text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                className="bg-primary inline-flex items-center justify-center p-2 text-white hover:text-white focus:outline-none"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >
                 <span className="sr-only">Open main menu</span>
                 {!isOpen ? (
                   <svg
-                    className="block h-6 w-6"
+                    className="block h-6 w-6 bg-primary"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -94,7 +94,7 @@ function NavBar() {
                   </svg>
                 ) : (
                   <svg
-                    className="block h-6 w-6"
+                    className="block h-6 w-6 bg-primary"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -126,40 +126,50 @@ function NavBar() {
           {(ref) => (
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a
-                  href="/start"
-                  className=" text-white block px-3 py-2 rounded-md text-base font-medium"
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive ? activeLink : normalLink
+                  }
                 >
                   Start
-                </a>
+                </NavLink>
 
-                <a
-                  href="/patienten"
-                  className="text-white block px-3 py-2 rounded-md text-base font-medium"
+                <NavLink
+                  to="/patienten"
+                  className={({ isActive }) =>
+                    isActive ? activeLink : normalLink
+                  }
                 >
                   Patienten
-                </a>
+                </NavLink>
 
-                <a
-                  href="/kurven"
-                  className="text-white block px-3 py-2 rounded-md text-base font-medium"
+                <NavLink
+                  to="/kurven"
+                  className={({ isActive }) =>
+                    isActive ? activeLink : normalLink
+                  }
                 >
                   Kurven
-                </a>
+                </NavLink>
 
-                <a
-                  href="/einstellungen"
-                  className="text-white block px-3 py-2 rounded-md text-base font-medium"
+                <NavLink
+                  to="/einstellungen"
+                  className={({ isActive }) =>
+                    isActive ? activeLink : normalLink
+                  }
                 >
                   Einstellungen
-                </a>
+                </NavLink>
 
-                <a
-                  href="/log"
-                  className="text-white block px-3 py-2 rounded-md text-base font-medium"
+                <NavLink
+                  to="/log"
+                  className={({ isActive }) =>
+                    isActive ? activeLink : normalLink
+                  }
                 >
                   Protokoll
-                </a>
+                </NavLink>
               </div>
             </div>
           )}
